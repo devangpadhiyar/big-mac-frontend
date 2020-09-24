@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Container, Row, Spinner } from 'react-bootstrap';
 
 const GlobalProduct = (props) => {
-  const { status, data, price, localData } = props;
+  const { status, data, price, localData, localProductStatus } = props;
 
-  if (status === 'loading') {
+  if (status === 'loading' || localProductStatus === 'loading') {
     return (
       <>
         <hr className={'divider'} />
@@ -59,6 +59,7 @@ const GlobalProduct = (props) => {
 
 GlobalProduct.propTypes = {
   status: PropTypes.string,
+  localProductStatus: PropTypes.string,
   data: PropTypes.object,
   localData: PropTypes.object,
   price: PropTypes.object,

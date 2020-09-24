@@ -39,7 +39,7 @@ function useCountry() {
     try {
       const response = await getCountryData();
       if (response.status === 200) {
-        dispatch({ type: 'SUCCESS', data: response.data });
+        dispatch({ type: 'SUCCESS', data: response.data.data });
       } else {
         dispatch({ type: 'ERROR', data: response.data });
       }
