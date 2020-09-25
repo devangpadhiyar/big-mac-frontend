@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Row, Spinner } from 'react-bootstrap';
+import { Spinner } from 'react-bootstrap';
 
 const LocalProduct = (props) => {
   const { status, data, price } = props;

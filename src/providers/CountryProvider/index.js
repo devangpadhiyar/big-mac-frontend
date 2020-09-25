@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import publicIp from 'public-ip';
+import React from 'react';
 import { getCountryData } from '../../api/country';
 
 const CountryContext = React.createContext();
