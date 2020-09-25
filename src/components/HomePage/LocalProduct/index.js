@@ -9,6 +9,7 @@ const LocalProduct = (props) => {
       <>
         <hr className={'divider'} />
         <div
+          data-testid={'local-product-loader'}
           className={'d-flex justify-content-center align-items-center h-100'}
         >
           <Spinner animation="border" />
@@ -27,10 +28,12 @@ const LocalProduct = (props) => {
       <>
         <hr className={'divider'} />
         <div>
-          <p>
+          <p data-testid={'local-price-item'}>
             You could buy {parseInt(numberOfItems)} of Big Macs in your country.
           </p>
-          <p>Your Dollar Purchasing Parity (PPP) is {dollarPPP}</p>
+          <p data-testid={'local-ppp'}>
+            Your Dollar Purchasing Parity (PPP) is {dollarPPP}
+          </p>
         </div>
       </>
     );

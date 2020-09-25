@@ -10,6 +10,7 @@ const GlobalProduct = (props) => {
       <>
         <hr className={'divider'} />
         <div
+          data-testid={'global-product-loader'}
           className={'d-flex justify-content-center align-items-center h-100'}
         >
           <Spinner animation="border" />
@@ -38,14 +39,14 @@ const GlobalProduct = (props) => {
       <>
         <hr className={'divider'} />
         <div>
-          <p>
+          <p data-testid={'foreign-country-title'}>
             Results compared to random country Random Country: {data.Country}
           </p>
-          <p>
+          <p data-testid={'price-data'}>
             You could buy {parseInt(numberOfItems)} of Big Macs in{' '}
             {data.Country} with {price}!{' '}
           </p>
-          <p>
+          <p data-testid={'foreign-price-data'}>
             Your {price} is worth about {localPriceWorthInRandCountry} in{' '}
             {data.Country}
           </p>
@@ -62,7 +63,7 @@ GlobalProduct.propTypes = {
   localProductStatus: PropTypes.string,
   data: PropTypes.object,
   localData: PropTypes.object,
-  price: PropTypes.object,
+  price: PropTypes.number,
 };
 
 export default GlobalProduct;

@@ -1,9 +1,14 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
+import { CountryProvider } from './providers/CountryProvider';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+test('Should render a application with Header correctly', async () => {
+  // Render application
+  render(
+    <CountryProvider>
+      <App />
+    </CountryProvider>
+  );
+  expect(screen.getByText('Big Macs Demo').textContent).toBe('Big Macs Demo');
 });
