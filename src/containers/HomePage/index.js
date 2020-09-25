@@ -75,7 +75,9 @@ const HomePage = (props) => {
           )}
           {status === 'success' && (
             <>
-              <p>You are in {data.country_name}.</p>
+              <p data-testid={'country-container'}>
+                You are in {data.country_name}.
+              </p>
               <Form onSubmit={onSubmitForm}>
                 <Form.Group as={Row}>
                   <Form.Label column sm={'8'}>
